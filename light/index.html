@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Turan Orda FC — премиальный бойцовский зал в Шымкенте. Тренировки по ММА, боксу, грэпплингу под руководством тренера Мурата Естанова. Набор учеников!">
+  <meta name="keywords" content="Туран Орда, Turan Orda FC, ММА Шымкент, бокс Шымкент, бойцовский клуб, Мурат Естанов, единоборства, тренировки">
+  <title>Turan Orda FC — Премиальный бойцовский зал в Шымкенте | Набор открыт</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+
+  <!-- 3D Canvas Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">
+        <img src="images/logo.png" alt="Turan Orda FC Logo">
+        <span class="nav-logo-text">Turan <span>Orda</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about" data-i18n="nav-about">О зале</a>
+        <a href="#trainer" data-i18n="nav-trainer">Тренер</a>
+        <a href="#programs" data-i18n="nav-programs">Программы</a>
+        <a href="#schedule" data-i18n="nav-schedule">Расписание</a>
+        
+        <!-- Language Switcher in Menu -->
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="kz">KZ</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+
+        <a href="#" class="nav-cta" id="navCtaBtn" data-i18n="nav-cta">Записаться</a>
+      </div>
+      <div class="nav-hamburger" id="hamburger" aria-label="Меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          <span data-i18n="hero-tag">Шымкент • Набор открыт</span>
+        </div>
+        <h1 class="hero-title" data-i18n="hero-title">
+          Стань <span class="highlight">бойцом</span><br>
+          в зале <span class="outline-text">Turan Orda</span>
+        </h1>
+        <p class="hero-desc" data-i18n="hero-desc">
+          Профессиональные тренировки по ММА, боксу и грэпплингу под руководством 
+          опытного тренера Мурата Естанова. Приходи на первую бесплатную тренировку!
+        </p>
+        <div class="hero-buttons">
+          <button class="btn-primary" id="heroCtaBtn">
+            <span data-i18n="hero-btn-cta">Записаться на тренировку</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <a href="#programs" class="btn-outline">
+            <span data-i18n="hero-btn-programs">Программы</span>
+            <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-number" id="statYears">5+</div>
+            <div class="hero-stat-label" data-i18n="hero-stat-years">Лет опыта</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number" id="statStudents">200+</div>
+            <div class="hero-stat-label" data-i18n="hero-stat-students">Учеников</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number" id="statWins">50+</div>
+            <div class="hero-stat-label" data-i18n="hero-stat-wins">Побед</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-logo-container">
+          <div class="hero-logo-glow"></div>
+          <img src="images/logo.png" alt="Turan Orda FC" class="hero-logo-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-visual animate-on-scroll">
+        <img src="images/gym.png" alt="Зал Turan Orda FC внутри" class="about-img">
+        <div class="about-badge-card">
+          <div class="about-badge-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div class="about-badge-text">
+            <h5 data-i18n="about-badge-country">Казахстан</h5>
+            <p data-i18n="about-badge-city">г. Шымкент</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-content animate-on-scroll">
+        <span class="section-badge">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 3.99L19.53 19H4.47L12 5.99zM13 16h-2v2h2v-2zm0-6h-2v4h2v-4z"/></svg>
+          <span data-i18n="about-badge">О нашем зале</span>
+        </span>
+        <h2 class="section-title" data-i18n="about-title">Тренируйся как <span>профессионал</span></h2>
+        <p class="section-subtitle" data-i18n="about-subtitle">
+          Turan Orda FC — это современный бойцовский зал в Шымкенте, оснащённый профессиональным 
+          оборудованием для тренировок по смешанным единоборствам, боксу и грэпплингу.
+        </p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="about-feature-icon">
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z"/></svg>
+            </div>
+            <div class="about-feature-text">
+              <h4 data-i18n="about-f1-title">Профессиональный октагон</h4>
+              <p data-i18n="about-f1-desc">Полноразмерная клетка для тренировок и спаррингов в условиях, приближённых к реальным боям.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">
+              <svg viewBox="0 0 24 24"><path d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14 4.14 5.57 2 7.71 3.43 9.14 2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22 14.86 20.57 16.29 22 18.43 19.86 19.86 21.29 21.29 19.86 19.86 18.43 22 16.29z"/></svg>
+            </div>
+            <div class="about-feature-text">
+              <h4 data-i18n="about-f2-title">Современное оборудование</h4>
+              <p data-i18n="about-f2-desc">Высококачественные боксёрские мешки, маты премиум-класса, зона свободных весов и функциональный тренинг.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">
+              <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 8 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+            </div>
+            <div class="about-feature-text">
+              <h4 data-i18n="about-f3-title">Сильное комьюнити</h4>
+              <p data-i18n="about-f3-desc">Сплочённый коллектив единомышленников, где каждый поддерживает друг друга на пути к самосовершенствованию.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRAINER ===== -->
+  <section class="trainer" id="trainer">
+    <div class="container">
+      <div class="programs-header animate-on-scroll">
+        <span class="section-badge">
+          <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          <span data-i18n="trainer-badge">Наши наставники</span>
+        </span>
+        <h2 class="section-title" data-i18n="trainer-title">Тренерский <span>состав</span></h2>
+        <p class="section-subtitle" data-i18n="trainer-subtitle">
+          Ваш путь к победам проложат легендарные бойцы и тренеры международного уровня.
+        </p>
+      </div>
+
+      <div class="coaches-grid">
+        <!-- Coach 1: Murat Estanov -->
+        <div class="coach-card animate-on-scroll">
+          <div class="coach-visual">
+            <div class="trainer-frame-top"></div>
+            <img src="images/trainer.jpg" alt="Главный тренер Мурат Естанов" class="trainer-photo">
+            <div class="trainer-frame-bottom"></div>
+          </div>
+          <div class="coach-info">
+            <h3 class="trainer-name" data-i18n="trainer-murat-name">Мурат <span>Естанов</span></h3>
+            <div class="trainer-role" data-i18n="trainer-murat-role">Главный тренер • Основатель Turan Orda FC</div>
+            <p class="trainer-bio" data-i18n="trainer-murat-bio">
+              Мурат Баратович Естанов (в годы бойцовской карьеры — «Акула») — двукратный чемпион мира по панкратиону и известный казахстанский спортивный деятель. Личный тренер топовых бойцов MMA (включая Каршыгу Даутбека, восходящую звезду лиги Rizin FF). Официальный тренер ШВСМ г. Шымкент, президент «Федерации панкратиона» города и руководитель филиала федерации джиу-джитсу и грэпплинга.
+            </p>
+            <div class="trainer-achievements">
+              <div class="trainer-achievement">
+                <div class="trainer-achievement-icon"><svg viewBox="0 0 24 24"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v3c0 2.24 1.81 4.07 4.07 4.07.72.63 1.58 1.1 2.53 1.33L9.17 19H7v2h10v-2h-2.17l-.43-3.6c.95-.23 1.8-.7 2.53-1.33C19.19 14.07 21 12.24 21 10V7c0-1.1-.9-2-2-2zM5 10V7h2v3c0 .55-.45 1-1 1s-1-.45-1-1zm14 0c0 .55-.45 1-1 1s-1-.45-1-1V7h2v3z"/></svg></div>
+                <span data-i18n="trainer-murat-a1">Двукратный чемпион мира</span>
+              </div>
+              <div class="trainer-achievement">
+                <div class="trainer-achievement-icon"><svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 10.5L3.92 9 12 4.5l8.08 4.5L12 13.5zM12 15c-3.15 0-6 .85-6 2.5v2.5h12v-2.5c0-1.65-2.85-2.5-6-2.5z"/></svg></div>
+                <span data-i18n="trainer-murat-a2">Президент Федерации Панкратиона</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coach 2: Yerzhan Estanov -->
+        <div class="coach-card animate-on-scroll">
+          <div class="coach-visual">
+            <div class="trainer-frame-top"></div>
+            <img src="images/yerzhan.jpg" alt="Тренер Ержан Естанов" class="trainer-photo">
+            <div class="trainer-frame-bottom"></div>
+          </div>
+          <div class="coach-info">
+            <h3 class="trainer-name" data-i18n="trainer-yerzhan-name">Ержан <span>Естанов</span></h3>
+            <div class="trainer-role" data-i18n="trainer-yerzhan-role">Главный тренер • «Арлан» (Волк)</div>
+            <p class="trainer-bio" data-i18n="trainer-yerzhan-bio">
+              Ержан Естанов — легендарный ветеран и пионер казахстанского ММА. Получил огромную известность благодаря зрелищной исторической трилогии поединков против Расула Мирзаева. Мастер джиу-джитсу и грэпплинга с несгибаемым характером, полностью посвятивший себя воспитанию нового поколения чемпионов.
+            </p>
+            <div class="trainer-achievements">
+              <div class="trainer-achievement">
+                <div class="trainer-achievement-icon"><svg viewBox="0 0 24 24"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v3c0 2.24 1.81 4.07 4.07 4.07.72.63 1.58 1.1 2.53 1.33L9.17 19H7v2h10v-2h-2.17l-.43-3.6c.95-.23 1.8-.7 2.53-1.33C19.19 14.07 21 12.24 21 10V7c0-1.1-.9-2-2-2zM5 10V7h2v3c0 .55-.45 1-1 1s-1-.45-1-1zm14 0c0 .55-.45 1-1 1s-1-.45-1-1V7h2v3z"/></svg></div>
+                <span data-i18n="trainer-yerzhan-a1">Легендарный пионер ММА</span>
+              </div>
+              <div class="trainer-achievement">
+                <div class="trainer-achievement-icon"><svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 10.5L3.92 9 12 4.5l8.08 4.5L12 13.5zM12 15c-3.15 0-6 .85-6 2.5v2.5h12v-2.5c0-1.65-2.85-2.5-6-2.5z"/></svg></div>
+                <span data-i18n="trainer-yerzhan-a2">Эксперт по БЖЖ и Партеру</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 56px;" class="animate-on-scroll">
+        <button class="btn-primary" id="trainerCtaBtn">
+          <span data-i18n="trainer-btn-cta">Начать тренировки</span>
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROGRAMS ===== -->
+  <section class="programs" id="programs">
+    <div class="container">
+      <div class="programs-header animate-on-scroll">
+        <span class="section-badge">
+          <svg viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+          <span data-i18n="programs-badge">Выбери дисциплину</span>
+        </span>
+        <h2 class="section-title" data-i18n="programs-title">Программы <span>тренировок</span></h2>
+        <p class="section-subtitle" data-i18n="programs-subtitle">
+          У нас есть программы как для новичков, так и для опытных спортсменов, стремящихся к вершинам.
+        </p>
+      </div>
+      <div class="programs-grid">
+        <!-- Card 1 -->
+        <div class="program-card tilt-card animate-on-scroll">
+          <span class="program-card-tag" data-i18n="programs-tag-popular">Популярно</span>
+          <div class="program-card-icon tilt-child">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          </div>
+          <div class="program-card-body tilt-child">
+            <h3 class="program-card-title" data-i18n="program1-title">ММА</h3>
+            <p class="program-card-desc" data-i18n="program1-desc">
+              Универсальная подготовка по смешанным боевым искусствам: ударная и бросковая техника, болевые приемы.
+            </p>
+            <div class="program-card-details">
+              <div class="program-card-detail">
+                <div class="program-card-detail-value">6x</div>
+                <div class="program-card-detail-label" data-i18n="program-label-week">в неделю</div>
+              </div>
+              <div class="program-card-detail">
+                <div class="program-card-detail-value">1.5ч</div>
+                <div class="program-card-detail-label" data-i18n="program-label-class">урок</div>
+              </div>
+              <div class="program-card-detail">
+                <div class="program-card-detail-value" data-i18n="program-val-all">Все</div>
+                <div class="program-card-detail-label" data-i18n="program-label-groups">группы</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="program-card tilt-card animate-on-scroll">
+          <div class="program-card-icon tilt-child">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+          </div>
+          <div class="program-card-body tilt-child">
+            <h3 class="program-card-title" data-i18n="program2-title">Грэпплинг</h3>
+            <p class="program-card-desc" data-i18n="program2-desc">
+              Акцент на позиционную борьбу, переводы в партер, эффективные удушающие и болевые приемы без ударов.
+            </p>
+            <div class="program-card-details">
+              <div class="program-card-detail">
+                <div class="program-card-detail-value">4x</div>
+                <div class="program-card-detail-label" data-i18n="program-label-week">в неделю</div>
+              </div>
+              <div class="program-card-detail">
+                <div class="program-card-detail-value">1.5ч</div>
+                <div class="program-card-detail-label" data-i18n="program-label-class">урок</div>
+              </div>
+              <div class="program-card-detail">
+                <div class="program-card-detail-value" data-i18n="program-val-all">Все</div>
+                <div class="program-card-detail-label" data-i18n="program-label-groups">группы</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="program-card tilt-card animate-on-scroll">
+          <div class="program-card-icon tilt-child">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          </div>
+          <div class="program-card-body tilt-child">
+            <h3 class="program-card-title" data-i18n="program3-title">Физподготовка</h3>
+            <p class="program-card-desc" data-i18n="program3-desc">
+              Развитие силы, выносливости, координации и скоростных навыков с использованием передового оборудования.
+            </p>
+            <div class="program-card-details">
+              <div class="program-card-detail">
+                <div class="program-card-detail-value">5x</div>
+                <div class="program-card-detail-label" data-i18n="program-label-week">в неделю</div>
+              </div>
+              <div class="program-card-detail">
+                <div class="program-card-detail-value">1ч</div>
+                <div class="program-card-detail-label" data-i18n="program-label-class">урок</div>
+              </div>
+              <div class="program-card-detail">
+                <div class="program-card-detail-value" data-i18n="program-val-all">Все</div>
+                <div class="program-card-detail-label" data-i18n="program-label-groups">группы</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENEFITS ===== -->
+  <section class="benefits" id="benefits">
+    <div class="container">
+      <div class="benefits-header animate-on-scroll">
+        <span class="section-badge">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 3.99L19.53 19H4.47L12 5.99zM13 16h-2v2h2v-2zm0-6h-2v4h2v-4z"/></svg>
+          <span data-i18n="benefits-badge">Наши стандарты</span>
+        </span>
+        <h2 class="section-title" data-i18n="benefits-title">Наши главные <span>преимущества</span></h2>
+        <p class="section-subtitle" data-i18n="benefits-subtitle">
+          Мы создаем идеальные условия для вашего спортивного роста и достижения пиковых результатов.
+        </p>
+      </div>
+      <div class="benefits-grid">
+        <!-- Benefit 1 -->
+        <div class="benefit-card tilt-card animate-on-scroll">
+          <div class="benefit-icon tilt-child">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          </div>
+          <h4 class="benefit-title tilt-child" data-i18n="benefit1-title">Индивидуальный подход</h4>
+          <p class="benefit-desc tilt-child" data-i18n="benefit1-desc">Внимание к каждому ученику, адаптация нагрузок под текущий уровень физической подготовки.</p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="benefit-card tilt-card animate-on-scroll">
+          <div class="benefit-icon tilt-child">
+            <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+          </div>
+          <h4 class="benefit-title tilt-child" data-i18n="benefit2-title">Доступные абонементы</h4>
+          <p class="benefit-desc tilt-child" data-i18n="benefit2-desc">Прозрачная и лояльная ценовая политика. Бесплатная ознакомительная тренировка для каждого.</p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="benefit-card tilt-card animate-on-scroll">
+          <div class="benefit-icon tilt-child">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+          </div>
+          <h4 class="benefit-title tilt-child" data-i18n="benefit3-title">Турнирная практика</h4>
+          <p class="benefit-desc tilt-child" data-i18n="benefit3-desc">Возможность участия в официальных городских, республиканских и международных турнирах по MMA.</p>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="benefit-card tilt-card animate-on-scroll">
+          <div class="benefit-icon tilt-child">
+            <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </div>
+          <h4 class="benefit-title tilt-child" data-i18n="benefit4-title">Любой возраст</h4>
+          <p class="benefit-desc tilt-child" data-i18n="benefit4-desc">Наличие раздельных групп для детей от 7 лет, подростков и взрослых. Тренировки с любым уровнем базы.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SCHEDULE ===== -->
+  <section class="schedule" id="schedule">
+    <div class="container">
+      <div class="schedule-header animate-on-scroll">
+        <span class="section-badge">
+          <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+          <span data-i18n="schedule-badge">Спланируй время</span>
+        </span>
+        <h2 class="section-title" data-i18n="schedule-title">График <span>тренировок</span></h2>
+        <p class="section-subtitle" data-i18n="schedule-subtitle">
+          Выберите подходящее время для тренировок. Мы работаем шесть дней в неделю.
+        </p>
+      </div>
+      <div class="schedule-table-wrapper animate-on-scroll">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th data-i18n="sch-time">Время</th>
+              <th data-i18n="sch-mon">Пн</th>
+              <th data-i18n="sch-tue">Вт</th>
+              <th data-i18n="sch-wed">Ср</th>
+              <th data-i18n="sch-thu">Чт</th>
+              <th data-i18n="sch-fri">Пт</th>
+              <th data-i18n="sch-sat">Сб</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="schedule-time">09:00 — 10:30</td>
+              <td><span class="schedule-active" data-i18n="sch-active-kids-mma">ММА (дети)</span></td>
+              <td><span class="schedule-active" data-i18n="sch-active-grap">Грэпплинг</span></td>
+              <td><span class="schedule-active" data-i18n="sch-active-kids-mma">ММА (дети)</span></td>
+              <td><span class="schedule-active" data-i18n="sch-active-grap">Грэпплинг</span></td>
+              <td><span class="schedule-active" data-i18n="sch-active-kids-mma">ММА (дети)</span></td>
+              <td><span class="schedule-active" data-i18n="sch-active-spar">Спарринги</span></td>
+            </tr>
+            <tr>
+              <td class="schedule-time">16:00 — 17:30</td>
+              <td><span class="schedule-active" data-i18n="sch-active-teens-mma">ММА (юноши)</span></td>
+              <td><span class="schedule-active" data-i18n="sch-active-ofp">ОФП / Физподгот.</span></td>
+              <td><span class="schedule-active" data-i18n="sch-active-teens-mma">ММА (юноши)</span></td>
+              <td><span class="schedule-active" data-i18n="sch-active-ofp">ОФП / Физподгот.</span></td>
+              <td><span class="schedule-active" data-i18n="sch-active-teens-mma">ММА (юноши)</span></td>
+              <td><span class="schedule-rest">—</span></td>
+            </tr>
+            <tr>
+              <td class="schedule-time">18:00 — 19:30</td>
+              <td><span class="schedule-active" data-i18n="sch-active-adults-mma">ММА (взрослые)</span></td>
+              <td><span class="schedule-active" data-i18n="sch-active-grap">Грэпплинг</span></td>
+              <td><span class="schedule-active" data-i18n="sch-active-adults-mma">ММА (взрослые)</span></td>
+              <td><span class="schedule-active" data-i18n="sch-active-grap">Грэпплинг</span></td>
+              <td><span class="schedule-active" data-i18n="sch-active-adults-mma">ММА (взрослые)</span></td>
+              <td><span class="schedule-rest">—</span></td>
+            </tr>
+            <tr>
+              <td class="schedule-time">19:30 — 21:00</td>
+              <td><span class="schedule-active" data-i18n="sch-active-tactics">Тактика / Спарринг</span></td>
+              <td><span class="schedule-active" data-i18n="sch-active-cf">Кроссфит</span></td>
+              <td><span class="schedule-active" data-i18n="sch-active-tactics">Тактика / Спарринг</span></td>
+              <td><span class="schedule-active" data-i18n="sch-active-cf">Кроссфит</span></td>
+              <td><span class="schedule-active" data-i18n="sch-active-tactics">Тактика / Спарринг</span></td>
+              <td><span class="schedule-rest">—</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta" id="cta">
+    <div class="container">
+      <div class="cta-box animate-on-scroll">
+        <h2 class="cta-title" data-i18n="cta-title">Пробный день — <span>абсолютно бесплатно!</span></h2>
+        <p class="cta-desc" data-i18n="cta-desc">
+          Сделайте первый шаг навстречу сильному телу и крепкому характеру. Оставьте свой номер, и мы проконсультируем вас по всем вопросам.
+        </p>
+        <div class="cta-form" id="ctaForm">
+          <input type="tel" placeholder="+7 (___) ___-__-__" id="ctaPhone" autocomplete="tel" data-i18n="[placeholder]cta-phone-placeholder">
+          <button class="btn-primary" id="ctaSubmitBtn">
+            <span data-i18n="cta-btn">Записаться</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <p class="cta-note" data-i18n="cta-note">Мы перезвоним вам в течение получаса для согласования деталей.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="contacts">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-logo">
+            <img src="images/logo.png" alt="Turan Orda FC">
+            <span class="footer-brand-name">Turan <span>Orda</span> FC</span>
+          </div>
+          <p data-i18n="footer-desc">
+            Премиальный спортивный зал смешанных единоборств в Шымкенте. Стань сильнее вместе с лучшей командой.
+          </p>
+          <div class="footer-social">
+            <a href="#" title="Instagram" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="#" title="Telegram" aria-label="Telegram">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.21-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.37.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .24z"/></svg>
+            </a>
+            <a href="#" title="WhatsApp" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.02-.007-.115-.057-.272-.136-.157-.079-.733-.362-.847-.4-.114-.04-.198-.059-.282.058-.084.118-.328.4-.402.487-.075.088-.15.099-.307.02-.157-.079-.663-.245-1.263-.78-.467-.416-.783-.93-.875-1.088-.092-.157-.01-.242.07-.32.071-.071.157-.18.236-.269.079-.09.106-.15.158-.25.052-.1.026-.188-.013-.268-.039-.079-.283-.68-.388-.934-.102-.247-.206-.213-.283-.213-.073 0-.157-.009-.241-.009-.083 0-.22.032-.336.158-.116.126-.443.433-.443 1.057 0 .623.454 1.224.517 1.309.063.085.892 1.363 2.161 1.906.302.13.537.207.72.266.302.096.577.082.795.049.243-.037.733-.3 1.002-.592.269-.292.269-.541.189-.592-.081-.05-1.127-.555-1.127-.555zM12 2C6.48 2 2 6.48 2 12c0 2.17.69 4.19 1.86 5.86L2 22l4.3-1.74C7.9 21.36 9.87 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.84 0-3.55-.53-5-1.43l-.36-.23-2.5 1.01.76-2.39-.27-.41A7.93 7.93 0 014 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4 data-i18n="footer-col-nav">Навигация</h4>
+          <ul>
+            <li><a href="#about" data-i18n="nav-about">О зале</a></li>
+            <li><a href="#trainer" data-i18n="nav-trainer">Тренер</a></li>
+            <li><a href="#programs" data-i18n="nav-programs">Программы</a></li>
+            <li><a href="#schedule" data-i18n="nav-schedule">Расписание</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 data-i18n="footer-col-prog">Программы</h4>
+          <ul>
+            <li><a href="#programs" data-i18n="program1-title">ММА</a></li>
+            <li><a href="#programs" data-i18n="program2-title">Грэпплинг</a></li>
+            <li><a href="#programs" data-i18n="program3-title">Физподготовка</a></li>
+            <li><a href="#programs" data-i18n="footer-kids-group">Детская группа</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 data-i18n="footer-col-contacts">Контакты</h4>
+          <ul>
+            <li><a href="tel:+77001234567">📞 +7 (700) 123-45-67</a></li>
+            <li><a href="#" data-i18n="footer-address">📍 г. Шымкент</a></li>
+            <li><a href="#" data-i18n="footer-hours">🕐 Пн-Сб: 09:00 — 21:00</a></li>
+            <li><a href="mailto:turanorda@mail.ru">✉️ turanorda@mail.ru</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer-copyright">© 2026 Turan Orda FC. Все права защищены.</p>
+        <p data-i18n="footer-sub-copyright">Бойцовский зал в Шымкенте</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== MODAL ===== -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="signupModal">
+      <button class="modal-close" id="modalClose" aria-label="Закрыть">✕</button>
+      <div id="modalFormContent">
+        <h2 data-i18n="modal-title">Запись на <span>тренировку</span></h2>
+        <p data-i18n="modal-desc">Заполните форму, и мы свяжемся с вами</p>
+        <form class="modal-form" id="signupForm">
+          <input type="text" placeholder="Ваше имя" id="signupName" required data-i18n="[placeholder]modal-name-placeholder">
+          <input type="tel" placeholder="+7 (___) ___-__-__" id="signupPhone" required data-i18n="[placeholder]modal-phone-placeholder">
+          <select id="signupProgram">
+            <option value="" disabled selected data-i18n="modal-opt-prog">Выберите программу</option>
+            <option value="mma" data-i18n="program1-title">ММА</option>
+            <option value="grappling" data-i18n="program2-title">Грэпплинг</option>
+            <option value="fitness" data-i18n="program3-title">Физподготовка</option>
+            <option value="kids" data-i18n="footer-kids-group">Детская группа</option>
+          </select>
+          <select id="signupAge">
+            <option value="" disabled selected data-i18n="modal-opt-age">Возрастная группа</option>
+            <option value="kids" data-i18n="modal-age-kids">Дети (7-12 лет)</option>
+            <option value="teens" data-i18n="modal-age-teens">Подростки (13-17 лет)</option>
+            <option value="adults" data-i18n="modal-age-adults">Взрослые (18+)</option>
+          </select>
+          <button type="submit" class="btn-primary">
+            <span data-i18n="modal-btn">Отправить заявку</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+      </div>
+      <div class="modal-success" id="modalSuccess">
+        <div class="modal-success-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+        </div>
+        <h3 data-i18n="modal-success-title">Заявка отправлена!</h3>
+        <p data-i18n="modal-success-desc">Мы перезвоним вам в ближайшее время для подтверждения записи</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SCROLL TO TOP ===== -->
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Наверх">
+    <svg viewBox="0 0 24 24"><path d="M4 12l1.41 1.41L11 6.83V20h2V6.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>
+  </button>
+
+  <script>
+    // ---- Translation Dictionary ----
+    const i18n = {
+      ru: {
+        "nav-about": "О зале",
+        "nav-trainer": "Тренер",
+        "nav-programs": "Программы",
+        "nav-schedule": "Расписание",
+        "nav-cta": "Записаться",
+        "hero-tag": "Шымкент • Набор открыт",
+        "hero-title": "Стань <span class=\"highlight\">бойцом</span><br>в зале <span class=\"outline-text\">Turan Orda</span>",
+        "hero-desc": "Профессиональные тренировки по ММА, боксу и грэпплингу под руководством опытного тренера Мурата Естанова. Приходи на первую бесплатную тренировку!",
+        "hero-btn-cta": "Записаться на тренировку",
+        "hero-btn-programs": "Программы",
+        "hero-stat-years": "Лет опыта",
+        "hero-stat-students": "Учеников",
+        "hero-stat-wins": "Побед",
+        "about-badge-country": "Казахстан",
+        "about-badge-city": "г. Шымкент",
+        "about-badge": "О нашем зале",
+        "about-title": "Тренируйся как <span>профессионал</span>",
+        "about-subtitle": "Turan Orda FC — это современный бойцовский зал в Шымкенте, оснащённый профессиональным оборудованием для тренировок по смешанным единоборствам, боксу и грэпплингу.",
+        "about-f1-title": "Профессиональный октагон",
+        "about-f1-desc": "Полноразмерная клетка для тренировок и спаррингов в условиях, приближённых к реальным боям.",
+        "about-f2-title": "Современное оборудование",
+        "about-f2-desc": "Высококачественные боксёрские мешки, маты премиум-класса, зона свободных весов и функциональный тренинг.",
+        "about-f3-title": "Сильное комьюнити",
+        "about-f3-desc": "Сплочённый коллектив единомышленников, где каждый поддерживает друг друга на пути к самосовершенствованию.",
+        "trainer-badge": "Наши наставники",
+        "trainer-title": "Тренерский <span>состав</span>",
+        "trainer-subtitle": "Ваш путь к победам проложат легендарные бойцы и тренеры международного уровня.",
+        "trainer-murat-name": "Мурат <span>Естанов</span>",
+        "trainer-murat-role": "Главный тренер • Основатель Turan Orda FC",
+        "trainer-murat-bio": "Мурат Баратович Естанов (в годы бойцовской карьеры — «Акула») — двукратный чемпион мира по панкратиону и известный казахстанский спортивный деятель. Личный тренер топовых бойцов MMA (включая Каршыгу Даутбека, восходящую звезду лиги Rizin FF). Официальный тренер ШВСМ г. Шымкент, президент «Федерации панкратиона» города и руководитель филиала федерации джиу-джитсу и грэпплинга.",
+        "trainer-murat-a1": "Двукратный чемпион мира",
+        "trainer-murat-a2": "Президент Федерации Панкратиона",
+        "trainer-yerzhan-name": "Ержан <span>Естанов</span>",
+        "trainer-yerzhan-role": "Главный тренер • «Арлан» (Волк)",
+        "trainer-yerzhan-bio": "Ержан Естанов — легендарный ветеран и пионер казахстанского ММА. Получил огромную известность благодаря зрелищной исторической трилогии поединков против Расула Мирзаева. Мастер джиу-джитсу и грэпплинга с несгибаемым характером, полностью посвятивший себя воспитанию нового поколения чемпионов.",
+        "trainer-yerzhan-a1": "Легендарный пионер ММА",
+        "trainer-yerzhan-a2": "Эксперт по БЖЖ и Партеру",
+        "trainer-btn-cta": "Начать тренировки",
+        "programs-badge": "Выбери дисциплину",
+        "programs-title": "Программы <span>тренировок</span>",
+        "programs-subtitle": "У нас есть программы как для новичков, так и для опытных спортсменов, стремящихся к вершинам.",
+        "programs-tag-popular": "Популярно",
+        "program1-title": "ММА",
+        "program1-desc": "Универсальная подготовка по смешанным боевым искусствам: ударная и бросковая техника, болевые приемы.",
+        "program-label-week": "в неделю",
+        "program-label-class": "урок",
+        "program-val-all": "Все",
+        "program-label-groups": "группы",
+        "program2-title": "Грэпплинг",
+        "program2-desc": "Акцент на позиционную борьбу, переводы в партер, эффективные удушающие и болевые приемы без ударов.",
+        "program3-title": "Физподготовка",
+        "program3-desc": "Развитие силы, выносливости, координации и скоростных навыков с использованием передового оборудования.",
+        "benefits-badge": "Наши стандарты",
+        "benefits-title": "Наши главные <span>преимущества</span>",
+        "benefits-subtitle": "Мы создаем идеальные условия для вашего спортивного роста и достижения пиковых результатов.",
+        "benefit1-title": "Индивидуальный подход",
+        "benefit1-desc": "Внимание к каждому ученику, адаптация нагрузок под текущий уровень физической подготовки.",
+        "benefit2-title": "Доступные абонементы",
+        "benefit2-desc": "Прозрачная и лояльная ценовая политика. Бесплатная ознакомительная тренировка для каждого.",
+        "benefit3-title": "Турнирная практика",
+        "benefit3-desc": "Возможность участия в официальных городских, республиканских и международных турнирах по MMA.",
+        "benefit4-title": "Любой возраст",
+        "benefit4-desc": "Наличие раздельных групп для детей от 7 лет, подростков и взрослых. Тренировки с любым уровнем базы.",
+        "schedule-badge": "Спланируй время",
+        "schedule-title": "График <span>тренировок</span>",
+        "schedule-subtitle": "Выберите подходящее время для тренировок. Мы работаем шесть дней в неделю.",
+        "sch-time": "Время",
+        "sch-mon": "Пн",
+        "sch-tue": "Вт",
+        "sch-wed": "Ср",
+        "sch-thu": "Чт",
+        "sch-fri": "Пт",
+        "sch-sat": "Сб",
+        "sch-active-kids-mma": "ММА (дети)",
+        "sch-active-grap": "Грэпплинг",
+        "sch-active-spar": "Спарринги",
+        "sch-active-teens-mma": "ММА (юноши)",
+        "sch-active-ofp": "ОФП / Физподгот.",
+        "sch-active-adults-mma": "ММА (взрослые)",
+        "sch-active-tactics": "Тактика / Спарринг",
+        "sch-active-cf": "Кроссфит",
+        "cta-title": "Пробный день — <span>абсолютно бесплатно!</span>",
+        "cta-desc": "Сделайте первый шаг навстречу сильному телу и крепкому характеру. Оставьте свой номер, и мы проконсультируем вас по всем вопросам.",
+        "cta-phone-placeholder": "+7 (___) ___-__-__",
+        "cta-btn": "Записаться",
+        "cta-note": "Мы перезвоним вам в течение получаса для согласования деталей.",
+        "footer-desc": "Премиальный спортивный зал смешанных единоборств в Шымкенте. Стань сильнее вместе с лучшей командой.",
+        "footer-col-nav": "Навигация",
+        "footer-col-prog": "Программы",
+        "footer-kids-group": "Детская группа",
+        "footer-col-contacts": "Контакты",
+        "footer-address": "📍 г. Шымкент",
+        "footer-hours": "🕐 Пн-Сб: 09:00 — 21:00",
+        "footer-copyright": "© 2026 Turan Orda FC. Все права защищены.",
+        "footer-sub-copyright": "Бойцовский зал в Шымкенте",
+        "modal-title": "Запись на <span>тренировку</span>",
+        "modal-desc": "Заполните форму, и мы свяжемся с вами",
+        "modal-name-placeholder": "Ваше имя",
+        "modal-phone-placeholder": "+7 (___) ___-__-__",
+        "modal-opt-prog": "Выберите программу",
+        "modal-opt-age": "Возрастная группа",
+        "modal-age-kids": "Дети (7-12 лет)",
+        "modal-age-teens": "Подростки (13-17 лет)",
+        "modal-age-adults": "Взрослые (18+)",
+        "modal-btn": "Отправить заявку",
+        "modal-success-title": "Заявка отправлена!",
+        "modal-success-desc": "Мы перезвоним вам в ближайшее время для подтверждения записи"
+      },
+      kz: {
+        "nav-about": "Зал туралы",
+        "nav-trainer": "Жаттықтырушы",
+        "nav-programs": "Бағдарламалар",
+        "nav-schedule": "Кесте",
+        "nav-cta": "Жазылу",
+        "hero-tag": "Шымкент • Қабылдау ашық",
+        "hero-title": "Turan Orda<br>залында <span class=\"highlight\">жауынгер</span> бол",
+        "hero-desc": "Тәжірибелі жаттықтырушы Мұрат Естановтың жетекшілігімен ММА, бокс және грэпплинг бойынша кәсіби жаттығулар. Бірінші тегін жаттығуға кел!",
+        "hero-btn-cta": "Жаттығуға жазылу",
+        "hero-btn-programs": "Бағдарламалар",
+        "hero-stat-years": "Жылдық тәжірибе",
+        "hero-stat-students": "Шәкірттер",
+        "hero-stat-wins": "Жеңістер",
+        "about-badge-country": "Қазақстан",
+        "about-badge-city": "Шымкент қ.",
+        "about-badge": "Залымыз туралы",
+        "about-title": "Кәсіби мамандарша <span>жаттық</span>",
+        "about-subtitle": "Turan Orda FC — бұл Шымкенттегі аралас жекпе-жек, бокс және грэпплинг жаттығуларына арналған заманауи және кәсіби жабдықталған бойцовский зал.",
+        "about-f1-title": "Кәсіби октагон",
+        "about-f1-desc": "Нағыз жекпе-жек жағдайларына барынша жақындатылған жаттығулар мен спаррингтерге арналған толық өлшемді тор.",
+        "about-f2-title": "Заманауи жабдықтар",
+        "about-f2-desc": "Жоғары сапалы бокс қаптары, премиум-класстағы маттар, еркін салмақ аймағы және функционалды жаттығулар.",
+        "about-f3-title": "Мықты комьюнити",
+        "about-f3-desc": "Өзін-өзі дамыту жолында әрқайсысы бір-бірін қолдайтын пікірлестердің ұйымшыл ұжымы.",
+        "trainer-badge": "Біздің бапкерлер",
+        "trainer-title": "Жаттықтырушылар <span>құрамы</span>",
+        "trainer-subtitle": "Жеңіске жетелейтін жолды халықаралық деңгейдегі аңызға айналған спортшылар мен жаттықтырушылар салады.",
+        "trainer-murat-name": "Мұрат <span>Естанов</span>",
+        "trainer-murat-role": "Бас бапкер • Turan Orda FC негізін қалаушы",
+        "trainer-murat-bio": "Мұрат Баратович Естанов (жекпе-жек жылдарында — «Акула») — панкратионнан екі дүркін әлем чемпионы және белгілі қазақстандық спорт қайраткері. ММА кәсіпқой жауынгерлерінің (соның ішінде Rizin FF лигасының жұлдызы Қаршыға Дәуітбектің) жеке бапкері. Шымкент қ. ШЖСМ ресми бапкері, қалалық «Панкратион федерациясының» президенті және джиу-джитсу мен грэпплинг федерациясы филиалының жетекшісі.",
+        "trainer-murat-a1": "Екі дүркін әлем чемпионы",
+        "trainer-murat-a2": "Панкратион Федерациясы Президенті",
+        "trainer-yerzhan-name": "Ержан <span>Естанов</span>",
+        "trainer-yerzhan-role": "Бас бапкер • «Арлан» (Көкжал)",
+        "trainer-yerzhan-bio": "Ержан Естанов — қазақстандық ММА-дің аңызға айналған ардагері және пионері. Расул Мирзаевқа қарсы өткен тарихи жекпе-жек трилогиясы арқылы кеңінен танымал. Жас чемпиондарды тәрбиелеуге өзін толықтай арнаған, қайсар мінезді джиу-джитсу мен грэпплинг шебері.",
+        "trainer-yerzhan-a1": "ММА аңыз пионері",
+        "trainer-yerzhan-a2": "БЖЖ және партер сарапшысы",
+        "trainer-btn-cta": "Жаттығуді бастау",
+        "programs-badge": "Дисциплинаны таңда",
+        "programs-title": "Жаттығу <span>бағдарламалары</span>",
+        "programs-subtitle": "Бізде жаңадан бастаушыларға да, шыңдарға ұмтылатын тәжірибелі спортшыларға да арналған бағдарламалар бар.",
+        "programs-tag-popular": "Танымал",
+        "program1-title": "ММА",
+        "program1-desc": "Аралас жекпе-жектен әмбебап дайындық: соққы және лақтыру техникасы, ауырту әдістері.",
+        "program-label-week": "аптасына",
+        "program-label-class": "сабақ",
+        "program-val-all": "Барлық",
+        "program-label-groups": "топтар",
+        "program2-title": "Грэпплинг",
+        "program2-desc": "Позициялық күреске, партерге көшіруге, соққысыз тиімді тұншықтыру және ауырту әдістеріне басымдық беру.",
+        "program3-title": "Дене дайындығы",
+        "program3-desc": "Заманауи жабдықтарды қолдана отырып күш, төзімділік, үйлесімділік және жылдамдық дағдыларын дамыту.",
+        "benefits-badge": "Біздің стандарттар",
+        "benefits-title": "Біздің басты <span>артықшылықтарымыз</span>",
+        "benefits-subtitle": "Біз сіздің спорттық өсуіңіз бен жоғары нәтижелерге қол жеткізуіңіз үшін тамаша жағдайлар жасаймыз.",
+        "benefit1-title": "Жеке тәсіл",
+        "benefit1-desc": "Әрбір шәкіртке көңіл бөлу, жүктемені дене дайындығының ағымдағы деңгейіне бейімдеу.",
+        "benefit2-title": "Қолжетімді абонементтер",
+        "benefit2-desc": "Ашық және адал баға саясаты. Әрбір адам үшін тегін танысу жаттығуы.",
+        "benefit3-title": "Турнирлік практика",
+        "benefit3-desc": "MMA бойынша ресми қалалық, республикалық және халықаралық турнирлерге қатысу мүмкіндігі.",
+        "benefit4-title": "Кез келген жас",
+        "benefit4-desc": "7 жастан асқан балаларға, жасөспірімдер мен ересектерге арналған бөлек топтардың болуы.",
+        "schedule-badge": "Уақытты жоспарла",
+        "schedule-title": "Жаттығу <span>кестесі</span>",
+        "schedule-subtitle": "Жаттығулар үшін қолайлы уақытты таңдаңыз. Біз аптасына алты күн жұмыс істейміз.",
+        "sch-time": "Уақыт",
+        "sch-mon": "Дс",
+        "sch-tue": "Сс",
+        "sch-wed": "Ср",
+        "sch-thu": "Бс",
+        "sch-fri": "Жм",
+        "sch-sat": "Сб",
+        "sch-active-kids-mma": "ММА (балалар)",
+        "sch-active-grap": "Грэпплинг",
+        "sch-active-spar": "Спаррингтер",
+        "sch-active-teens-mma": "ММА (жасөспірімдер)",
+        "sch-active-ofp": "ОФП / Дене дайындығы",
+        "sch-active-adults-mma": "ММА (ересектер)",
+        "sch-active-tactics": "Тактика / Спарринг",
+        "sch-active-cf": "Кроссфит",
+        "cta-title": "Сынақ күні — <span>мүлдем тегін!</span>",
+        "cta-desc": "Күшті дене мен мықты мінезге қарай алғашқы қадам жасаңыз. Нөміріңізді қалдырыңыз, біз сізге барлық сұрақтар бойынша кеңес береміз.",
+        "cta-phone-placeholder": "+7 (___) ___-__-__",
+        "cta-btn": "Жазылу",
+        "cta-note": "Мәліметтерді нақтылау үшін сізге жарты сағат ішінде хабарласамыз.",
+        "footer-desc": "Шымкенттегі аралас жекпе-жектен премиум деңгейдегі спорт залы. Үздік командамен бірге мықты бол.",
+        "footer-col-nav": "Навигация",
+        "footer-col-prog": "Бағдарламалар",
+        "footer-kids-group": "Балалар тобы",
+        "footer-col-contacts": "Контактілер",
+        "footer-address": "📍 Шымкент қ.",
+        "footer-hours": "🕐 Дс-Сб: 09:00 — 21:00",
+        "footer-copyright": "© 2026 Turan Orda FC. Барлық құқықтар қорғалған.",
+        "footer-sub-copyright": "Шымкенттегі спорт залы",
+        "modal-title": "Жаттығуға <span>жазылу</span>",
+        "modal-desc": "Форманы толтырыңыз, біз сізбен хабарласамыз",
+        "modal-name-placeholder": "Сіздің атыңыз",
+        "modal-phone-placeholder": "+7 (___) ___-__-__",
+        "modal-opt-prog": "Бағдарламаны таңдаңыз",
+        "modal-opt-age": "Жас тобы",
+        "modal-age-kids": "Балалар (7-12 жас)",
+        "modal-age-teens": "Жасөспірімдер (13-17 жас)",
+        "modal-age-adults": "Ересектер (18+)",
+        "modal-btn": "Өтінім жіберу",
+        "modal-success-title": "Өтінім жіберілді!",
+        "modal-success-desc": "Жазылуды растау үшін сізге жақын арада хабарласамыз"
+      },
+      en: {
+        "nav-about": "About",
+        "nav-trainer": "Coach",
+        "nav-programs": "Programs",
+        "nav-schedule": "Schedule",
+        "nav-cta": "Join Us",
+        "hero-tag": "Shymkent • Registration Open",
+        "hero-title": "Become a <span class=\"highlight\">fighter</span><br>at <span class=\"outline-text\">Turan Orda</span> gym",
+        "hero-desc": "Professional training in MMA, Boxing, and Grappling under the guidance of experienced coach Murat Estanov. Come to your first free class!",
+        "hero-btn-cta": "Join Training Now",
+        "hero-btn-programs": "Programs",
+        "hero-stat-years": "Years Experience",
+        "hero-stat-students": "Students",
+        "hero-stat-wins": "Wins",
+        "about-badge-country": "Kazakhstan",
+        "about-badge-city": "Shymkent",
+        "about-badge": "About Gym",
+        "about-title": "Train like a <span>professional</span>",
+        "about-subtitle": "Turan Orda FC is a modern fighting gym in Shymkent, fully equipped with professional gear for MMA, Boxing, and Grappling classes.",
+        "about-f1-title": "Professional Octagon",
+        "about-f1-desc": "A full-sized cage for training and sparring in conditions closest to real competitive fights.",
+        "about-f2-title": "Modern Equipment",
+        "about-f2-desc": "Premium punch bags, professional-grade mats, a free weights area, and functional strength conditioning gear.",
+        "about-f3-title": "Strong Community",
+        "about-f3-desc": "A tight-knit community of like-minded individuals supporting each other on the path of self-improvement.",
+        "trainer-badge": "Our Mentors",
+        "trainer-title": "Coaching <span>Staff</span>",
+        "trainer-subtitle": "Your path to victories will be paved by legendary fighters and international-class coaches.",
+        "trainer-murat-name": "Murat <span>Estanov</span>",
+        "trainer-murat-role": "Head Coach • Founder of Turan Orda FC",
+        "trainer-murat-bio": "Murat Baratovich Estanov (known in his fighting years as 'Shark') is a two-time world champion in pankration and a prominent Kazakh sports figure. He is the personal coach of top MMA fighters, including Karshyga Dautbek (Rizin FF star fighter). Official coach of ShVSM Shymkent, president of Shymkent Pankration Federation, and director of the Shymkent branch of BJJ and Grappling federation.",
+        "trainer-murat-a1": "Two-time World Champion",
+        "trainer-murat-a2": "President of Pankration Federation",
+        "trainer-yerzhan-name": "Yerzhan <span>Estanov</span>",
+        "trainer-yerzhan-role": "Head Coach • \"Arlan\" (Wolf)",
+        "trainer-yerzhan-bio": "Yerzhan Estanov is a legendary veteran and pioneer of Kazakh MMA. He gained immense fame throughout CIS due to his spectacular historical trilogy of fights against Rasul Mirzaev. A BJJ and grappling master with an iron character, fully dedicated to raising a new generation of champions.",
+        "trainer-yerzhan-a1": "Legendary MMA Pioneer",
+        "trainer-yerzhan-a2": "BJJ & Grappling Expert",
+        "trainer-btn-cta": "Start Training",
+        "programs-badge": "Choose Discipline",
+        "programs-title": "Training <span>Programs</span>",
+        "programs-subtitle": "We offer programs tailored for both complete beginners and seasoned athletes aiming for the top.",
+        "programs-tag-popular": "Popular",
+        "program1-title": "MMA",
+        "program1-desc": "Comprehensive mixed martial arts training: striking, grappling, takedowns, and submissions.",
+        "program-label-week": "per week",
+        "program-label-class": "class",
+        "program-val-all": "All",
+        "program-label-groups": "levels",
+        "program2-title": "Grappling",
+        "program2-desc": "Focus on positional wrestling, takedowns, and highly effective submissions without striking.",
+        "program3-title": "Conditioning",
+        "program3-desc": "Build strength, endurance, coordination, and explosive power using high-end gym equipment.",
+        "benefits-badge": "Our Standards",
+        "benefits-title": "Our Main <span>Advantages</span>",
+        "benefits-subtitle": "We create the ideal conditions for your athletic progress and peak physical achievements.",
+        "benefit1-title": "Individual Approach",
+        "benefit1-desc": "Attention to every student, adapting loads and drills based on current fitness levels.",
+        "benefit2-title": "Affordable Memberships",
+        "benefit2-desc": "Transparent and friendly pricing. Free trial class for every new visitor.",
+        "benefit3-title": "Tournament Practice",
+        "benefit3-desc": "Opportunities to participate in official city, national, and international MMA tournaments.",
+        "benefit4-title": "Any Age Group",
+        "benefit4-desc": "Separate groups for children (7+), teenagers, and adults of all experience levels.",
+        "schedule-badge": "Plan Your Time",
+        "schedule-title": "Training <span>Schedule</span>",
+        "schedule-subtitle": "Select a time that suits your lifestyle. We operate six days a week.",
+        "sch-time": "Time",
+        "sch-mon": "Mon",
+        "sch-tue": "Tue",
+        "sch-wed": "Wed",
+        "sch-thu": "Thu",
+        "sch-fri": "Fri",
+        "sch-sat": "Sat",
+        "sch-active-kids-mma": "MMA (Kids)",
+        "sch-active-grap": "Grappling",
+        "sch-active-spar": "Sparring",
+        "sch-active-teens-mma": "MMA (Juniors)",
+        "sch-active-ofp": "Strength & Cond.",
+        "sch-active-adults-mma": "MMA (Adults)",
+        "sch-active-tactics": "Tactics / Sparring",
+        "sch-active-cf": "Crossfit",
+        "cta-title": "First Trial Day — <span>Absolutely Free!</span>",
+        "cta-desc": "Take the first step toward a stronger body and unbreakable character. Leave your number, and we'll consult you on everything.",
+        "cta-phone-placeholder": "+7 (___) ___-__-__",
+        "cta-btn": "Join Us",
+        "cta-note": "We'll call you back within half an hour to finalize details.",
+        "footer-desc": "Premium mixed martial arts training facility in Shymkent. Become stronger with the best team.",
+        "footer-col-nav": "Navigation",
+        "footer-col-prog": "Programs",
+        "footer-kids-group": "Kids Group",
+        "footer-col-contacts": "Contacts",
+        "footer-address": "📍 Shymkent",
+        "footer-hours": "🕐 Mon-Sat: 09:00 — 21:00",
+        "footer-copyright": "© 2026 Turan Orda FC. All rights reserved.",
+        "footer-sub-copyright": "Fighting Gym in Shymkent",
+        "modal-title": "Book a <span>Training</span>",
+        "modal-desc": "Fill out the form and we will contact you",
+        "modal-name-placeholder": "Your Name",
+        "modal-phone-placeholder": "+7 (___) ___-__-__",
+        "modal-opt-prog": "Select Program",
+        "modal-opt-age": "Age Group",
+        "modal-age-kids": "Kids (7-12 y.o.)",
+        "modal-age-teens": "Teens (13-17 y.o.)",
+        "modal-age-adults": "Adults (18+)",
+        "modal-btn": "Send Request",
+        "modal-success-title": "Request Sent!",
+        "modal-success-desc": "We will call you back shortly to confirm your booking"
+      }
+    };
+
+    function setLanguage(lang) {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        
+        // Handle input placeholders
+        if (key.startsWith('[placeholder]')) {
+          const pureKey = key.replace('[placeholder]', '');
+          if (i18n[lang] && i18n[lang][pureKey]) {
+            el.placeholder = i18n[lang][pureKey];
+          }
+          return;
+        }
+
+        if (i18n[lang] && i18n[lang][key]) {
+          el.innerHTML = i18n[lang][key];
+        }
+      });
+
+      // Update button classes
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        if (btn.getAttribute('data-lang') === lang) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      // Store in localStorage
+      localStorage.setItem('turan_orda_lang', lang);
+    }
+
+    // Set initial language from localStorage or fallback to Russian
+    const savedLang = localStorage.getItem('turan_orda_lang') || 'ru';
+    setLanguage(savedLang);
+
+    // Click listeners for switcher
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const selectedLang = btn.getAttribute('data-lang');
+        setLanguage(selectedLang);
+      });
+    });
+
+
+    // ---- 3D Canvas Background Script (Interactive Mesh) ----
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+
+    let particles = [];
+    const particleCount = 65;
+    let mouse = { x: null, y: null, radius: 150 };
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    window.addEventListener('mousemove', (e) => {
+      mouse.x = e.x;
+      mouse.y = e.y;
+    });
+
+    window.addEventListener('mouseleave', () => {
+      mouse.x = null;
+      mouse.y = null;
+    });
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.vx = (Math.random() - 0.5) * 0.4;
+        this.vy = (Math.random() - 0.5) * 0.4;
+        this.size = Math.random() * 2 + 1;
+      }
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+
+        if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+        if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+
+        // Interaction with mouse
+        if (mouse.x != null && mouse.y != null) {
+          let dx = this.x - mouse.x;
+          let dy = this.y - mouse.y;
+          let dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < mouse.radius) {
+            let force = (mouse.radius - dist) / mouse.radius;
+            this.x += (dx / dist) * force * 2;
+            this.y += (dy / dist) * force * 2;
+          }
+        }
+      }
+
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(227, 27, 35, 0.18)';
+        ctx.fill();
+      }
+    }
+
+    function initParticles() {
+      particles = [];
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+    }
+    initParticles();
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Draw smooth grid background
+      ctx.strokeStyle = 'rgba(10, 10, 13, 0.015)';
+      ctx.lineWidth = 1;
+      let gridSpacing = 80;
+      for (let x = 0; x < canvas.width; x += gridSpacing) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, canvas.height);
+        ctx.stroke();
+      }
+      for (let y = 0; y < canvas.height; y += gridSpacing) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(canvas.width, y);
+        ctx.stroke();
+      }
+
+      // Draw particle network lines
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].update();
+        particles[i].draw();
+
+        for (let j = i + 1; j < particles.length; j++) {
+          let dx = particles[i].x - particles[j].x;
+          let dy = particles[i].y - particles[j].y;
+          let dist = Math.sqrt(dx * dx + dy * dy);
+
+          if (dist < 180) {
+            let alpha = (180 - dist) / 180 * 0.08;
+            ctx.strokeStyle = `rgba(10, 10, 13, ${alpha})`;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+
+
+    // ---- 3D Tilt Effect on hover ----
+    const tiltCards = document.querySelectorAll('.tilt-card');
+    tiltCards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const rotateX = (centerY - y) / 12;
+        const rotateY = (x - centerX) / 12;
+        
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+      });
+      
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)`;
+      });
+    });
+
+
+    // ---- Scroll Progress & Navbar Scroll Effect ----
+    const navbar = document.getElementById('navbar');
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    const scrollProgress = document.getElementById('scrollProgress');
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (scrollY / docHeight) * 100;
+      scrollProgress.style.width = `${progress}%`;
+      
+      if (scrollY > 80) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+
+      if (scrollY > 500) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ---- Mobile Menu ----
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+      });
+    });
+
+    // ---- Modal Setup ----
+    const modalOverlay = document.getElementById('modalOverlay');
+    const modalClose = document.getElementById('modalClose');
+    const signupForm = document.getElementById('signupForm');
+    const modalFormContent = document.getElementById('modalFormContent');
+    const modalSuccess = document.getElementById('modalSuccess');
+
+    function openModal() {
+      modalOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      modalFormContent.style.display = 'block';
+      modalSuccess.classList.remove('active');
+    }
+
+    function closeModal() {
+      modalOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('heroCtaBtn').addEventListener('click', openModal);
+    document.getElementById('navCtaBtn').addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal();
+    });
+    document.getElementById('trainerCtaBtn').addEventListener('click', openModal);
+
+    modalClose.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    signupForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      modalFormContent.style.display = 'none';
+      modalSuccess.classList.add('active');
+      
+      setTimeout(() => {
+        closeModal();
+        signupForm.reset();
+      }, 3000);
+    });
+
+    document.getElementById('ctaSubmitBtn').addEventListener('click', () => {
+      const phone = document.getElementById('ctaPhone').value;
+      if (phone.trim()) {
+        openModal();
+        document.getElementById('signupPhone').value = phone;
+      } else {
+        openModal();
+      }
+    });
+
+    // ---- Scroll Animation (Intersection Observer) ----
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const siblings = entry.target.parentElement.querySelectorAll('.animate-on-scroll');
+          let delay = 0;
+          siblings.forEach((sibling, i) => {
+            if (sibling === entry.target) delay = i * 80;
+          });
+          
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, delay);
+          
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    // ---- Counter Animation ----
+    function animateCounter(element, target, suffix = '') {
+      let current = 0;
+      const increment = target / 60;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        element.textContent = Math.floor(current) + suffix;
+      }, 20);
+    }
+
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(document.getElementById('statYears'), 5, '+');
+          animateCounter(document.getElementById('statStudents'), 200, '+');
+          animateCounter(document.getElementById('statWins'), 50, '+');
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    const heroStats = document.querySelector('.hero-stats');
+    if (heroStats) statsObserver.observe(heroStats);
+
+    // ---- Phone mask (basic) ----
+    function phoneMask(input) {
+      input.addEventListener('input', function() {
+        let val = this.value.replace(/\D/g, '');
+        if (val.length > 0) {
+          if (val[0] === '8') val = '7' + val.slice(1);
+          let formatted = '+7';
+          if (val.length > 1) formatted += ' (' + val.slice(1, 4);
+          if (val.length > 4) formatted += ') ' + val.slice(4, 7);
+          if (val.length > 7) formatted += '-' + val.slice(7, 9);
+          if (val.length > 9) formatted += '-' + val.slice(9, 11);
+          this.value = formatted;
+        }
+      });
+    }
+
+    phoneMask(document.getElementById('ctaPhone'));
+    phoneMask(document.getElementById('signupPhone'));
+  </script>
+</body>
+</html>
